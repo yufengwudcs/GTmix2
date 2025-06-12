@@ -51,8 +51,8 @@ List of marginal trees in the optimal network:  <br />
 [0.5] ((B:0.0020,D:0.0010):0.4000,(A:1.0000,C:1.0000):0.7500)  <br />
 [0.5] (D:0.4010,(C:1.0000,(A:0.5000,B:0.0020):0.5000):0.7500)  <br />
 
-
-The
+What are these trees? These are the population trees contained (embedded) inside the AG. For AG with 1 admixture (the case here), there are 2 population trees. For AG with 2 admixtures, there are 4 population trees. For 3 admixtures, then 8 population trees and so on.
+You may be wondering why I output these trees instead 
 
 
 ## How does GTmix2 work?
