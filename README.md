@@ -51,8 +51,33 @@ List of marginal trees in the optimal network:  <br />
 [0.5] ((B:0.0020,D:0.0010):0.4000,(A:1.0000,C:1.0000):0.7500)  <br />
 [0.5] (D:0.4010,(C:1.0000,(A:0.5000,B:0.0020):0.5000):0.7500)  <br />
 
-What are these trees? These are the population trees contained (embedded) inside the AG. For AG with 1 admixture (the case here), there are 2 population trees. For AG with 2 admixtures, there are 4 population trees. For 3 admixtures, then 8 population trees and so on.
-You may be wondering why I output these trees instead 
+What are these trees? These are the population trees contained (embedded) inside the AG. For AG with 1 admixture (the case here), there are 2 population trees. For AG with 2 admixtures, there are 4 population trees. For 3 admixtures, then 8 population trees and so on.  <br />
+You may be wondering why I output these trees instead of the whole AG. The AG is output in the GML format in a file called optimal-network.gml. The GML format is very simple: it specifies the nodes and edges of a graph. 
+
+## How to prepare input?
+The key file is the genealogical tree file. The above example file test-trees.nwk contains the following trees:
+
+((1,2),(3,4))   <br />
+(((1,2),3),4)   <br />
+((1,2),(3,4))   <br />
+(((1,3),4),2)   <br />
+(((1,3),2),4)   <br />
+(((1,3),4),2)   <br />
+((1,3),(2,4))   <br />
+(((1,2),4),3)  <br />
+((1,3),(2,4))  <br />
+((1,3),(2,4))  <br />
+((1,3),(2,4))  <br />
+
+Each row has one tree (encoded by the standard Newick format). The taxa (1,2,3,4) refer to the haplotypes, which come from different populations. Now look at the population definition file listPops4p1a.txt.
+
+A 1 1   <br />
+B 1 2    <br />
+C 1 3   <br />
+D 1 4  <br />
+
+Each row specifies a population (so there are four populations). For each row, the first field is the population label. The second is the number of haplotypes in the population. Startiing from the third field, we list all the haplotypes from this population. 
+
 
 
 ## How does GTmix2 work?
