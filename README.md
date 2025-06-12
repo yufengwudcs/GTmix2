@@ -19,36 +19,40 @@ Start by test whether GTmix2 runs on your computer as follows. From the src fold
 ./gtmix2 -n 1 -P listPops4p1a.txt test-trees.nwk
 
 Explanation: 
-"-n 1":                you want to reconstruct an AG with one admixture. 
-"-P listPops4p1a.txt:  specifiy the population definiton file, which specifies which haplotype (numerically numbered by default) belongs to which population. 
-"test-trees.nwk"       the file containing the genealogical trees.
+"-n 1":                you want to reconstruct an AG with one admixture.   <br />
+"-P listPops4p1a.txt:  specifiy the population definiton file, which specifies which haplotype (numerically numbered by default) belongs to which population. <br /> 
+"test-trees.nwk"       the file containing the genealogical trees.  <br />
 
 If it runs, you should see:
 
-*** GTmix2 ver. 1.0.0.0, June 12, 2025 ***
+*** GTmix2 ver. 1.0.0.0, June 12, 2025 ***  <br />
+<br />
+Fix number of admixture nodes to: 1  <br />
+Number of gene trees to use: 11   <br />
+Scaffold tree: ((A:1.0000,C:1.0000):0.6364,(B:1.0000,D:1.0000):0.3636)  <br />
+Maximum number of gene alleles: 4  <br />
+Initial network probability: -25.7869  <br />
+Number of neighboring nets to evaluate: 50  <br />
+****** Highest log-probabiliyt of optimized network (searching over network space): -23.5208  <br />
+Time needed to find the optimal network:   <br />
+Optimal network: output to file: optimal-network.gml  <br />
+List of marginal trees in the optimal network:  <br />
+[0.5] ((B:0.0020,D:0.0010):0.4000,(A:1.0000,C:1.0000):0.7500)  <br />
+[0.5] (D:0.4010,(C:1.0000,(A:0.5000,B:0.0020):0.5000):0.7500)  <br />
+Admixture population: B <br />
+Cache probability computation: [0] cache hits among total 0 queries, num of storing operations: 0  <br />
+AGProcessedNetsDepot: total number of novel networks processed: 0, number of skipped networks: 0  <br />
+ApproxGTPCache2: Num of listdbVals entries: 14   <br />
+ApproxGTPCache2: Num of listCachedCoalProb entries: 0  <br />
+Elapsed time = 0 seconds.  <br />
 
-Fix number of admixture nodes to: 1
-Number of gene trees to use: 11
-Scaffold tree: ((A:1.0000,C:1.0000):0.6364,(B:1.0000,D:1.0000):0.3636)
-Maximum number of gene alleles: 4
-Initial network probability: -25.7869
-Number of neighboring nets to evaluate: 50
-****** Highest log-probabiliyt of optimized network (searching over network space): -23.5208
-Time needed to find the optimal network: 0
-Optimal network: output to file: optimal-network.gml
-List of marginal trees in the optimal network:
-[0.5] ((B:0.0020,D:0.0010):0.4000,(A:1.0000,C:1.0000):0.7500)
-[0.5] (D:0.4010,(C:1.0000,(A:0.5000,B:0.0020):0.5000):0.7500)
-Admixture population: B
-Cache probability computation: [0] cache hits among total 0 queries, num of storing operations: 0
-AGProcessedNetsDepot: total number of novel networks processed: 0, number of skipped networks: 0
-ApproxGTPCache2: Num of listdbVals entries: 14
-ApproxGTPCache2: Num of listCachedCoalProb entries: 0
-Elapsed time = 0 seconds.
+Pay attention to the following:  <br />
+List of marginal trees in the optimal network:  <br />
+[0.5] ((B:0.0020,D:0.0010):0.4000,(A:1.0000,C:1.0000):0.7500)  <br />
+[0.5] (D:0.4010,(C:1.0000,(A:0.5000,B:0.0020):0.5000):0.7500)  <br />
 
-Pay attention to the following:
-List of marginal trees in the optimal network:
-[0.5] ((B:0.0020,D:0.0010):0.4000,(A:1.0000,C:1.0000):0.7500)The
+
+The
 
 
 ## How does GTmix2 work?
